@@ -1,6 +1,7 @@
 # usersapi
-Spring boot learning project
-This project is entended to answer a technicaltest offer about Java langage in Spring Boot environment.
+Spring boot learning project.
+
+This project is entended to answer a technical test offer about Java langage in Spring Boot environment.
 
 ## Technical test offer
 A Springboot API that exposes two services:
@@ -31,6 +32,7 @@ Logs are sent to the console.
 
 ## Tests
 There are unit and functional tests done using Spring Boot facilities, and a Postman collection is also available.
+**Warning**: tests with birthdate are done with hardcoded date (year 2020), so they won't be accurate in around 16 years (in 2038).
 
 ## How To
 Once this repository is cloned, maven commands are available:
@@ -60,10 +62,12 @@ Return an array of all registered users.
 ## GET /user/{id}
 Return the user with identifier 'id'.
 ## POST /user
-Create a new user, "gender" and "phone" are optional.
+Create a new user.
+A body is required, "gender" and "phone" are optional.
+
 ## PUT /user/{id}
 Update the given user with the data from the body.
+A body is required with the field that needs to be updated.
+
 ## DELETE /user/{id}
 Delete the given user.
-
-
