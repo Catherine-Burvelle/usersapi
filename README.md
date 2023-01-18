@@ -24,9 +24,14 @@ Inputs must be validated and return proper error messages/http statuses.
 ## Specific interpretation
 I have added endpoints that reads all users, that update a user and that delete a user.
 
-I have also put as properties the age limit and the allowed countries of residence (with Monaco added on top of France).
+I have also put as properties the age limit and the allowed countries of residence (with Monaco added on top of France). This is placed in the ``src/main/resources/application.properties`` file.
+```
+#usersapi Configuration
+fr.burvelle.usersapi.agelimit=18
+fr.burvelle.usersapi.countrylist=France,Monaco
+```
 
-The project is configured with an embeded H2 database.
+The project is configured with an embeded H2 database. The initialization file is ``data.sql`` in ``src/main/resources`` directory.
 
 Logs are sent to the console.
 
@@ -59,11 +64,13 @@ Answers are also JSON objects.
 
 ## GET /users
 Return an array of all registered users.
+
 ## GET /user/{id}
 Return the user with identifier 'id'.
+
 ## POST /user
 Create a new user.
-A body is required, "gender" and "phone" are optional.
+A full body is required as shown before except for "gender" and "phone" that are optional.
 
 ## PUT /user/{id}
 Update the given user with the data from the body.
