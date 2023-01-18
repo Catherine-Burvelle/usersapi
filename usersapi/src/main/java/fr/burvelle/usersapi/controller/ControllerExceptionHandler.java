@@ -27,7 +27,7 @@ public class ControllerExceptionHandler {
    
    @ExceptionHandler({DataIntegrityViolationException.class})
    @ResponseStatus(HttpStatus.FORBIDDEN)
-   public String handleAccessDeniedException( java.sql.SQLException ex) {
+   public String handleAccessDeniedException( Exception ex) {
        return ex.getMessage();
    }
 

@@ -1,9 +1,6 @@
 package fr.burvelle.usersapi.aspect;
 
-/*
- * Reference : https://www.javaguides.net/2019/05/spring-boot-spring-aop-logging-example-tutorial.html
- * 
- */
+
 import java.util.Arrays;
 
 import org.aspectj.lang.JoinPoint;
@@ -15,7 +12,13 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
+/**
+ * LoggingAspect
+ * Class that manage the logging of entry/exit of functions.
+ * 
+ * @reference : https://www.javaguides.net/2019/05/spring-boot-spring-aop-logging-example-tutorial.html
+ * 
+ */
 @Aspect
 @Component
 public class LoggingAspect {

@@ -12,6 +12,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+/**
+ * User
+ * Object that maps a DB row.
+ * 
+ * @author Catherine BURVELLE
+ * 
+ */
+
+
 @Data
 @Entity
 @Table(name = "users") 

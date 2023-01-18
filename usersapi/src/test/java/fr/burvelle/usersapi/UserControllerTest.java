@@ -1,5 +1,8 @@
 package fr.burvelle.usersapi;
 
+/*
+ * UserController Unit Test
+ */
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -25,6 +28,12 @@ public class UserControllerTest {
     public void testGetUsers() throws Exception {
         mockMvc.perform(get("/users"))
             .andExpect(status().isOk());
+    }
+    @Test
+    public void testGetUser() throws Exception {
+        mockMvc.perform(get("/user/100"))
+        .andExpect(status().is4xxClientError());
+ 
     }
 
 }

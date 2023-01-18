@@ -17,6 +17,13 @@ import fr.burvelle.usersapi.service.UserService;
 
 import java.util.Optional;
 
+/**
+ * UserController
+ * Class handling the mapping between HTTP request and the relevant service
+ * 
+ * @author Catherine BURVELLE
+ */
+
 @RestController
 public class UserController {
 
