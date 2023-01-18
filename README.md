@@ -74,7 +74,7 @@ A full body is required as shown before except for "gender" and "phone" that are
 
 ## PUT /user/{id}
 Update the given user with the data from the body.
-A body is required with the field that needs to be updated.
+A body is required with fields that need to be updated.
 
 ## DELETE /user/{id}
 Delete the given user.
