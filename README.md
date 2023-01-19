@@ -46,6 +46,16 @@ Once this repository is cloned, maven commands are available:
 - mvn test
 - mvn spring-boot:run
 
+### A typical test would be
+```
+> git clone git@github.com:Catherine-Burvelle/usersapi.git
+> cd usersapi/usersapi
+> mvn spring-boot:run
+```
+Then launch Postman and import collection from file ``usersapi/fr.burvelle.usersapi tests.postman_collection.json``.
+Run the full collection.
+
+
 # API
 When a body is required, the content of this body must be a JSON object with the following content :
 ```
